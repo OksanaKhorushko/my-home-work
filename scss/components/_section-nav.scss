@@ -1,0 +1,45 @@
+.section-nav {
+    background-color: #F8F3F4;
+    min-height: 148px;
+}
+
+.section-nav-wrapper {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    margin: 0;
+    color: #F16D7F;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.section-menu ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+.section-menu li {
+    color: #F16D7F;
+    font-weight: 300;
+}
+
+.section-menu li::after {
+    content: '/';
+    margin: 0 4px;
+}
+
+.section-menu li:last-child::after {
+    content: '';
+}
+
+.section-menu a {
+    text-decoration: none;
+    color: #636363;
+}

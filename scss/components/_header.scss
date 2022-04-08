@@ -1,0 +1,162 @@
+.header {
+    background: #222;
+
+    &-container {
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-col {
+        display: flex;
+        align-items: center;
+
+        &-left > div {
+            margin-right: 41px;
+        }
+
+        &-right > div {
+            margin-left: 33px;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+
+
+/* Search */
+.search-form {
+    position: relative;
+    height: 28px;
+    overflow: hidden;
+    width: 150px;
+
+    svg {
+        margin-right: 15px;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+.search-input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: -150px;
+    top: 0;
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    &:focus {
+        left: 0;
+
+        & + label {
+            display: none;
+        }
+    }
+}
+
+
+
+/* Navigation */
+.menu-btn {
+    display: inline-block;
+}
+
+#menu-switch:checked + .nav {
+    visibility: visible;
+}
+
+.nav {
+    visibility: hidden;
+    padding: 37px 34px 137px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 232px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    z-index: 1;
+
+    &-menu input {
+        display: none;
+    }
+
+    span {
+        display: block;
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-lvl-1 {
+        padding-top: 24px;
+
+        & > li > a {
+            color: #F16D7F;
+            text-transform: uppercase;
+        }
+    }
+
+    &-lvl-2 {
+        padding-left: 22px;
+        margin: 12px 0 20px;
+    }
+}
+
+.fa-solid {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    background-color: #F16D7F;
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}

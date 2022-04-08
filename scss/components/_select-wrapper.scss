@@ -1,0 +1,14 @@
+.select-wrapper {
+    margin: 0 11px;
+}
+
+.select-wrapper select {
+    display: block;
+    border: none;
+    text-transform: uppercase;
+    color: #6F6E6E;
+}
+
+.select-wrapper select:focus {
+    border: none;
+}

@@ -1,0 +1,38 @@
+.slider {
+    background-color: #F7F7F7;
+    min-height: 777px;
+    position: relative;
+    border: 1px solid #EAEAEA;
+}
+
+.slide-prev,
+.slide-next {
+    position: absolute;
+    background: rgba(42, 42, 42, 0.15);
+    width: 47px;
+    height: 47px;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slide-prev {
+    left: 0;
+}
+
+.slide-next {
+    right: 0;
+}
+
+.slider ul {
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    list-style: none;
+}
+
+.slide img {
+    margin: 0 auto;
+}

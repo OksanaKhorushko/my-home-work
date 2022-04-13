@@ -10,7 +10,7 @@
     width: 360px;
     padding: 20px 16px 48px 16px;
     box-sizing: border-box;
-    background: #FFFFFF;
+    background: main-bg;
     position: relative;
     /* box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21); */
     /* NB! */
@@ -26,11 +26,11 @@
         padding: 0;
         background-color: transparent;
         border: none;
-        color: #000000;
+        color: #000;
         text-align: left;
 
         &:hover {
-            color: #F16D7F;
+            color: $secondary-color;
         }
 
         &:active {
@@ -40,8 +40,6 @@
         span {
             font-style: normal;
             font-weight: 600;
-            font-size: 14px;
-            line-height: 16.8px;
             text-transform: uppercase;
         }
 
@@ -65,7 +63,7 @@
             left: 0;
             padding: 13px 16px 16px 16px;
             box-sizing: border-box;
-            background: #FFFFFF;
+            background: $main-bg;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             z-index: 1;
         }
@@ -75,10 +73,6 @@
             margin: 0 0 18px 0;
             padding: 11px 16px;
             box-sizing: border-box;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16.8px;
             border-bottom: 1px solid #EBEBEB;
             position: relative;
 
@@ -129,11 +123,6 @@
 
         &-item {
             margin: 0 0 11px 0;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16.8px;
-
             &:last-child {
                 margin: 0 0 24px 0;
             }
@@ -171,8 +160,6 @@
                 border: none;
                 font-style: normal;
                 font-weight: normal;
-                font-size: 14px;
-                line-height: 16.8px;
                 color: #6F6E6E;
                 background-color: transparent;
                 text-align: left;
@@ -185,7 +172,7 @@
                 }
 
                 &:hover {
-                    color: #F16D7F;
+                    color: $secondary-color;
 
                     svg {
                         fill: currentColor;
@@ -216,10 +203,6 @@
                     position: relative;
                     text-transform: uppercase;
                     font-family: Roboto;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 14px;
-                    line-height: 16.41px;
                     color: #6F6E6E;
 
                     &:before {
@@ -243,7 +226,7 @@
                 padding: 7px 5px 5px 31px;
                 text-align: left;
                 box-sizing: border-box;
-                background-color: #fff;
+                background-color: $main-bg;
                 position: absolute;
                 top: 18px;
                 left: -10px;

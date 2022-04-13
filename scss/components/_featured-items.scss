@@ -85,7 +85,7 @@
     span {
         font-size: 16px;
         line-height: 19px;
-        color: #F16D7F;
+        color: $secondary-color;
     }
 }
 
@@ -97,12 +97,12 @@
         font-size: 16px;
         line-height: 19px;
         color: #F26376;
-        background-color: #fff;
+        background-color: main-bg;
         border: 1px solid #FF6A6A;
 
         &:hover {
             color: #fff;
-            background-color: #F16D7F;
+            background-color: $secondary-color;
         }
     }
 }

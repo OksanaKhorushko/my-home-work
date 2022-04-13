@@ -10,7 +10,7 @@
         max-width: 652px;
         box-sizing: border-box;
         margin-bottom: 40px;
-        background: #fff;
+        background: $main-bg;
         filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));;
 
         &-content {
@@ -33,7 +33,7 @@
         }
 
         &-value-color {
-            color: #F16D7F;
+            color: $secondary-color;
         }
 
         &-quantity {

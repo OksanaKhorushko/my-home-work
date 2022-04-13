@@ -1,8 +1,8 @@
 body {
     font-family: $main-font;
-    font-size: 14px;
-    line-height: 17px;
-    color: #222;
+    font-size: $main-size;
+    line-height: $main-line-height;
+    color: $main-color;
 }
 
 button {
@@ -35,5 +35,5 @@ button:focus {
 
 input:focus-visible,
 button:focus-visible {
-    outline: 2px solid #F16D7F;
+    outline: 2px solid $secondary-color;
 }

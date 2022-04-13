@@ -91,7 +91,7 @@
         button {
             box-sizing: border-box;
             color: #fff;
-            background-color: #F16D7F;
+            background-color: $secondary-color;
             border: none;
             border-radius: 0 25px 25px 0;
             width: 100px;
@@ -137,13 +137,13 @@
         display: flex;
         width: 32px;
         height: 32px;
-        background-color: #fff;
+        background-color: $main-bg;
         margin-left: 7px;
         align-items: center;
         justify-content: center;
 
         &:hover {
-            background-color: #F16D7F;
+            background-color: $secondary-color;
 
             path {
                 fill: #fff;

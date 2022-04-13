@@ -1,6 +1,6 @@
 .product-details {
     position: relative;
-    background: #fff;
+    background: $main-bg;
     margin: -65px 0 98px;
     padding: 65px 0;
     border: 1px solid #EAEAEA;
@@ -18,7 +18,7 @@
         margin: 0 0 27px 0;
         position: relative;
         text-transform: uppercase;
-        color: #F16D7F;
+        color: $secondary-color;
         font-weight: 300;
 
         &::after {

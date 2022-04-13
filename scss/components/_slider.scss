@@ -3,6 +3,11 @@
     min-height: 777px;
     position: relative;
     border: 1px solid #EAEAEA;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .slide-prev,
@@ -24,15 +29,10 @@
     right: 0;
 }
 
-.slider ul {
-    margin: 0;
-    padding: 0;
-}
-
 .slide {
     list-style: none;
-}
 
-.slide img {
-    margin: 0 auto;
+    img {
+        margin: 0 auto;
+    }
 }

@@ -2,7 +2,7 @@
     display: none;
 }
 
-#switch-filter:checked ~ .filter-list-wrp {
+#switch-filter:checked~.filter-list-wrp {
     display: block;
 }
 
@@ -10,7 +10,7 @@
     width: 360px;
     padding: 20px 16px 48px 16px;
     box-sizing: border-box;
-    background: main-bg;
+    background: $main-bg;
     position: relative;
     /* box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21); */
     /* NB! */
@@ -89,7 +89,7 @@
 
             &:hover::before {
                 background-color: red;
-             }
+            }
 
             &:hover a {
                 color: red;
@@ -123,6 +123,7 @@
 
         &-item {
             margin: 0 0 11px 0;
+
             &:last-child {
                 margin: 0 0 24px 0;
             }
@@ -191,7 +192,7 @@
             &-item {
                 display: none;
 
-                &:checked + .filter-block-list-item-title::before {
+                &:checked+.filter-block-list-item-title::before {
                     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/600px-Green_tick.svg.png');
                     background-size: cover;
                     background-position: center;
@@ -238,7 +239,7 @@
         &-input {
             display: none;
 
-            &:checked ~ .filter-block-list-wrp {
+            &:checked~.filter-block-list-wrp {
                 display: flex;
             }
         }

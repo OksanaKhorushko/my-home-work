@@ -1,6 +1,16 @@
 .hot-deals {
     padding: 50px 0;
 
+
+    @include media(tablet) {
+        padding: 10px 0 114px;
+    }
+
+    @include media(mobile) {
+        padding: 54px 0 23px;
+    }
+
+
     &-list {
         flex-wrap: wrap;
         margin: 0;
@@ -10,17 +20,43 @@
         text-transform: uppercase;
         box-sizing: border-box;
 
+
+        @include media(tablet) {
+            margin: 0 -10px;
+        }
+
         li {
             box-sizing: border-box;
             margin: 0;
             padding: 15px;
             width: 33.3333%;
 
+
+            @include media(tablet) {
+                padding: 10px;
+            }
+
+            @include media(mobile) {
+                width: 100%;
+            }
+
             &:last-child {
                 width: 100%;
 
                 .hot-deals-link {
                     height: 180px;
+
+                    @include media(tablet) {
+                        height: 116px;
+                    }
+
+                    @include media(mobile) {
+                        max-height: 111px;
+                    }
+
+                    @include media(mobile-portrait) {
+                        height: 111px;
+                    }
                 }
             }
         }
@@ -34,6 +70,17 @@
         align-items: center;
         width: 100%;
         height: 260px;
+
+
+        @include media(tablet) {
+            background-size: cover;
+            background-position: center;
+            max-height: 167px;
+        }
+
+        @include media(mobile) {
+            max-height: 249px;
+        }
 
         &::before {
             content: '';

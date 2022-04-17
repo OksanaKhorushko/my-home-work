@@ -2,6 +2,14 @@
     padding: 31px 0;
     text-align: center;
 
+    @include media(tablet) {
+        padding: 31px 0 0 0;
+    }
+
+    @include media(mobile) {
+        padding: 31px 0;
+    }
+
     &-title {
         margin: 0 0 6px 0;
         font-size: 30px;
@@ -12,6 +20,26 @@
     &-text {
         margin: 0 0 48px 0;
         color: #9F9F9F;
+
+
+        @include media(tablet) {
+            margin: 0 0 74px 0;
+        }
+
+        @include media(mobile) {
+            margin: 0 0 65px 0;
+        }
+    }
+
+    &-wrp {
+
+        @include media(tablet) {
+            padding: 0 8px;
+        }
+
+        @include media(mobile-portrait) {
+            padding: 0;
+        }
     }
 
     &-col {
@@ -19,15 +47,37 @@
         padding: 0 15px;
         width: 33.3333%;
         text-align: left;
+
+        @include media(tablet) {
+            width: 50%;
+            padding: 0 8px;
+        }
+
+        @include media(mobile-portrait) {
+            width: 100%;
+        }
     }
 }
 
 .featured-item {
     margin-bottom: 30px;
     background-color: #F8F8F8;
+    box-sizing: border-box;
+
+    @include media(tablet) {
+        margin-bottom: 18px;
+    }
+
+    @include media(mobile-portrait) {
+        max-width: none;
+    }
 
     &-img {
         position: relative;
+
+        &>img {
+            width: 100%;
+        }
 
         &:hover .add-to-card {
             display: flex;
@@ -57,7 +107,7 @@
         border: 1px solid #fff;
 
         &:hover {
-            background-color: rgba(255,255,255, .2);
+            background-color: rgba(255, 255, 255, .2);
         }
 
         img {
@@ -92,17 +142,26 @@
 .browse-all-product {
     padding-top: 19px;
 
+    @include media(tablet) {
+        padding-top: 15px;
+    }
+
+    @include media(mobile-portrait) {
+        padding-top: 23px;
+    }
+
     &-btn {
         padding: 14px 38px;
         font-size: 16px;
         line-height: 19px;
-        color: #F26376;
-        background-color: main-bg;
+        background-color: $main-bg;
         border: 1px solid #FF6A6A;
+        text-decoration: none;
+        color: #F26376;
 
         &:hover {
-            color: #fff;
             background-color: $secondary-color;
+            color: #fff;
         }
     }
 }

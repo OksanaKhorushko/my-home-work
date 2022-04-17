@@ -1,12 +1,17 @@
 .header {
-    background: $dark-bg;
+    background: #222;
 
-    a:hover svg {
-        opacity: .8;
-    }
+    a {
+        display: inline-block;
 
-    a:hover img {
-        opacity: .8;
+
+        a:hover svg {
+            opacity: .8;
+        }
+
+        a:hover img {
+            opacity: .8;
+        }
     }
 
     &-container {
@@ -14,17 +19,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include media(tablet) {
+            padding: 0 32px;
+        }
+
+        @include media(mobile) {
+            padding: 0 16px;
+        }
+
     }
 
     &-col {
         display: flex;
         align-items: center;
 
-        &-left > div {
+        &-left>div {
             margin-right: 41px;
         }
 
-        &-right > div {
+        &-right>div {
             margin-left: 33px;
         }
 
@@ -34,7 +48,6 @@
         }
     }
 }
-
 
 
 /* Search */
@@ -78,12 +91,11 @@
     &:focus {
         transform: translateX(0);
 
-        & + label {
+        &+label {
             display: none;
         }
     }
 }
-
 
 
 /* Navigation */
@@ -96,7 +108,7 @@
     }
 }
 
-#menu-switch:checked + .nav {
+#menu-switch:checked+.nav {
     visibility: visible;
 }
 
@@ -112,6 +124,12 @@
     width: 232px;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     z-index: 1;
+
+
+    @include media(tablet) {
+        z-index: 3;
+        min-height: auto;
+    }
 
     &-menu input {
         display: none;
@@ -141,7 +159,7 @@
     &-lvl-1 {
         padding-top: 24px;
 
-        & > li > a {
+        &>li>a {
             color: $secondary-color;
             text-transform: uppercase;
         }
@@ -150,11 +168,11 @@
     &-lvl-2 {
         margin: 7px 0 15px;
 
-        & > li {
+        &>li {
             padding: 5px 0;
         }
 
-        & > li > a {
+        &>li>a {
             color: #6F6E6E;
             padding-left: 22px;
 
@@ -169,9 +187,22 @@
 }
 
 
+.account {
+
+    @include media(mobile) {
+        display: none;
+    }
+}
+
+
 
 .cart-icon {
     position: relative;
+    padding-right: 10px;
+
+    @include media(mobile) {
+        display: none;
+    }
 }
 
 .cart-counter {
@@ -187,5 +218,5 @@
     border-radius: 50%;
     position: absolute;
     top: -8px;
-    right: -10px;
+    right: 0;
 }

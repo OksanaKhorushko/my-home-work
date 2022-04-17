@@ -1,12 +1,22 @@
 .our-advantages {
     margin: 65px 0 0 0;
     background: #222224;
+    padding: 24px;
+
+    @include media(mobile) {
+        padding-bottom: 57px;
+    }
 
     &-col {
         box-sizing: border-box;
         padding: 104px 15px;
         width: 33.3333%;
         text-align: center;
+
+        @include media(tablet) {
+            width: 100%;
+            padding: 12px;
+        }
 
         svg {
             height: 40px;
@@ -31,4 +41,10 @@
 
 .our-advantage {
     padding: 25px;
+
+    @include media(tablet) {
+        padding: 12px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
 }

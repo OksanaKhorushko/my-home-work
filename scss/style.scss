@@ -1,7 +1,8 @@
 @import 'variables';
+@import 'mixins';
 @import 'fonts';
-@import './components/header';
 @import 'base';
+@import './components/header';
 @import './components/banner';
 @import './components/hot-deals';
 @import './components/featured-items';
@@ -14,4 +15,5 @@
 @import './components/select-wrapper';
 @import './components/cart';
 @import './components/product-form';
+@import './components/registration';
 @import './components/footer';

@@ -1,15 +1,37 @@
 .cart {
     padding: 96px 0 128px;
 
+    @include media(mobile) {
+        padding: 39px 0 96px;
+    }
+
     &-wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include media(tablet) {
+            display: block;
+        }
+
+        @include media(mobile) {
+            padding: 8px;
+        }
     }
 
     &-products-btns {
         margin-top: 73px;
         display: flex;
         justify-content: space-between;
+
+        @include media(tablet) {
+            margin: 63px 0 40px;
+            justify-content: center;
+        }
+
+        @include media(mobile) {
+            margin: 30px 0 40px;
+            justify-content: space-between;
+        }
 
         button {
             color: #000;
@@ -18,6 +40,18 @@
             background-color: $main-bg;
             border: 1px solid #A4A4A4;
             text-transform: uppercase;
+
+            @include media(tablet) {
+                margin: 0 25px;
+            }
+
+            @include media(mobile) {
+                font-size: 12px;
+                line-height: 14px;
+                padding: 8px;
+                min-width: 174px;
+                margin: 0;
+            }
 
             &:hover {
                 opacity: .8;
@@ -35,21 +69,44 @@
         background: $main-bg;
         filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
 
+        @include media(tablet) {
+            margin: 0 0 40px 0;
+            max-width: none;
+        }
+
+        @include media(mobile) {
+            min-height: auto;
+        }
+
         img {
             height: 100%;
             max-height: 306px;
+
+            @include media(mobile) {
+                max-height: 188px;
+            }
         }
 
         &-content {
             padding: 22px 97px 22px 31px;
-        }
 
-        &-content h3 {
-            max-width: 262px;
-            margin: 0 0 42px 0;
-            font-size: 24px;
-            line-height: 29px;
-            text-transform: uppercase;
+            @include media(mobile) {
+                padding: 14px 17px;
+            }
+
+            h3 {
+                max-width: 262px;
+                margin: 0 0 42px 0;
+                font-size: 24px;
+                line-height: 29px;
+                text-transform: uppercase;
+
+                @include media(mobile) {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 26px;
+                }
+            }
         }
 
         &-txt {
@@ -57,6 +114,12 @@
             margin-bottom: 6px;
             font-size: 22px;
             line-height: 26px;
+
+            @include media(mobile) {
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 4px;
+            }
         }
 
         &-value-color {
@@ -69,21 +132,46 @@
 
             input {
                 box-sizing: border-box;
-                width: 43px;
+                max-width: 43px;
                 max-height: 25px;
                 border: 1px solid #EAEAEA;
                 font-size: 18px;
                 line-height: 22px;
                 color: #656565;
-                text-align: right;
+                text-align: center;
+
+                @include media(mobile) {
+                    max-height: 15px;
+                    max-width: 24px;
+                    font-size: 10px;
+                    line-height: 12px;
+                }
             }
         }
     }
 
     &-form {
-        padding: 17px;
-        padding-left: 129px;
+        padding: 17px 17px 17px 129px;
         min-width: 360px;
+
+        @include media(tablet) {
+            padding: 24px 0 0 0;
+        }
+
+        @include media(mobile) {
+            padding: 8px 0 0 0;
+        }
+
+        &-wrapper {
+
+            @include media(tablet) {
+                display: flex;
+            }
+
+            @include media(mobile) {
+                display: block;
+            }
+        }
 
         h3 {
             margin: 0 0 20px 0;
@@ -107,11 +195,31 @@
             text-transform: uppercase;
             background: #fff;
 
+            @include media(tablet) {
+                margin: 0;
+            }
 
+            @include media(mobile) {
+                margin-bottom: 48px;
+            }
         }
 
         &-item {
             margin-bottom: 21px;
+
+            &-wrp {
+
+                @include media(tablet) {
+                    width: 50%;
+                    margin-right: 16px;
+                }
+
+                @include media(mobile) {
+                    width: 100%;
+                }
+
+
+            }
 
             input {
                 box-sizing: border-box;
@@ -159,6 +267,17 @@
             padding: 39px 34px 42px;
             text-transform: uppercase;
             text-align: right;
+            box-sizing: border-box;
+
+            @include media(tablet) {
+                width: 50%;
+                margin-left: 8px;
+            }
+
+            @include media(mobile) {
+                width: 100%;
+                margin: 0;
+            }
 
             &-btn {
                 background: $secondary-color;
@@ -172,8 +291,8 @@
                 line-height: 19px;
 
                 &:hover {
-                background-color: #E05C6E;
-            }
+                    background-color: #E05C6E;
+                }
 
                 &-wrp {
                     border-top: 1px solid #E2E2E2;

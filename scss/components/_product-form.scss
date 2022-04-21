@@ -1,6 +1,10 @@
 .product-form {
     padding-top: 65px;
 
+    @include media(mobile) {
+        padding-top: 50px;
+    }
+
     &-btn {
         margin: 0 auto;
         padding: 15px 23px;
@@ -44,6 +48,10 @@
 .parameters {
     margin-bottom: 49px;
     display: flex;
+
+    @include media(mobile) {
+        margin-bottom: 65px;
+    }
 }
 
 .product-parameters {

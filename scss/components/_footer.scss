@@ -116,6 +116,10 @@
 
             &:focus-visible {
                 outline: none;
+
+                &::placeholder {
+                    color: transparent;
+                }
             }
         }
 

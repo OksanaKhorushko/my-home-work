@@ -56,6 +56,13 @@
         @include media(mobile-portrait) {
             width: 100%;
         }
+
+        &-display-none-tablet {
+
+            @include media(tablet) {
+                display: none;
+            }
+        }
     }
 }
 
@@ -70,6 +77,10 @@
 
     @include media(mobile-portrait) {
         max-width: none;
+    }
+
+    @include media(mobile) {
+        margin-bottom: 16px;
     }
 
     &-img {

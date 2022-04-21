@@ -1,8 +1,16 @@
 .pagination {
     border: 1px solid #EBEBEB;
-    margin: 49px auto 0px;
+    margin: 49px auto 0;
     max-width: 283px;
     display: block;
+
+    @include media(tablet) {
+        margin-top: 22px;
+    }
+
+    @include media(mobile) {
+        margin-top: 24px;
+    }
 
     &-page {
         padding: 15px;

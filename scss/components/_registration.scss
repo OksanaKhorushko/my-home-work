@@ -1,6 +1,10 @@
 .registration {
     padding: 64px 0 96px;
 
+    @include media(tablet) {
+        padding-top: 40px;
+    }
+
     h2,
     h3,
     p,
@@ -17,10 +21,36 @@
     &-wrp {
         display: flex;
         justify-content: space-between;
+
+        @include media(mobile) {
+            display: block;
+            margin: 0 -8px;
+        }
     }
 
     &-form {
         max-width: 360px;
+
+        @include media(mobile) {
+            max-width: none;
+        }
+
+        &-wrp {
+
+            @include media(tablet) {
+                width: 50%;
+            }
+
+            @include media(mobile) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        &-radio {
+            display: flex;
+            margin: 31px 0 33px;
+        }
 
         input {
             box-sizing: border-box;
@@ -32,6 +62,10 @@
             line-height: 16px;
             border: 1px solid #A4A4A4;
             margin-top: 20px;
+
+            &:focus::placeholder {
+                color: transparent;
+            }
         }
 
         label {
@@ -71,6 +105,14 @@
         width: 100%;
         max-width: 652px;
 
+        @include media(tablet) {
+            width: 50%;
+        }
+
+        @include media(mobile) {
+            width: 100%;
+        }
+
         h2 {
             font-weight: 300;
             font-size: 24px;
@@ -78,6 +120,12 @@
             color: #000000;
             text-transform: uppercase;
             margin-bottom: 22px;
+
+            @include media(tablet) {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 32px;
+            }
         }
 
         p {
@@ -86,11 +134,14 @@
             line-height: 29px;
             color: #000000;
             margin-bottom: 21px;
+
+            @include media(tablet) {
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
 
-        ul {
-
-        }
+        ul {}
 
         li {
             position: relative;
@@ -101,13 +152,18 @@
             list-style: none;
             margin-bottom: 16px;
 
-            &:before{
+            @include media(tablet) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            &:before {
                 content: '';
                 width: 20px;
                 height: 16px;
                 background-image: url(../../img/marker.svg);
                 position: absolute;
-                top: 7px;
+                top: 5px;
                 left: -40px;
                 color: #000;
             }
@@ -115,9 +171,23 @@
     }
 }
 
+.register-choice-1,
+.register-choice-2,
+.register-choice-3 {
+    display: flex;
+}
+
+.register-choice-3 {
+    display: none;
+
+    @include media(tablet) {
+        display: flex;
+    }
+}
+
 #register-choice-1,
-#register-choice-2 {
-    display: inline-block;
+#register-choice-2,
+#register-choice-3 {
     width: 17px;
-    margin: 31px 0 33px;
+    margin: 0;
 }

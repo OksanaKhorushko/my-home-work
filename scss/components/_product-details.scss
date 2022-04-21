@@ -1,3 +1,10 @@
+.products-details .container {
+
+    @include media(tablet) {
+        padding: 0;
+    }
+}
+
 .product-details {
     position: relative;
     background: $main-bg;
@@ -6,12 +13,24 @@
     border: 1px solid #EAEAEA;
     z-index: 1;
 
+    @include media(tablet) {
+        margin-top: 0;
+    }
+
+    @include media(mobile) {
+        margin-bottom: 34px;
+    }
+
     &-content {
         text-align: center;
         margin: 0 auto;
         padding: 0 43px 65px;
         max-width: 555px;
         border-bottom: 1px solid #EAEAEA;
+
+        @include media(mobile) {
+            padding-bottom: 32px;
+        }
     }
 
     &-title {
@@ -47,6 +66,11 @@
         margin: 48px 0 32px;
         font-weight: 300;
         color: #5E5E5E;
+
+        @include media(mobile) {
+            margin: 32px 0;
+            line-height: 20px;
+        }
     }
 
     &-price {

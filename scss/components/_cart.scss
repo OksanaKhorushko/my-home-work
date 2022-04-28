@@ -89,6 +89,7 @@
 
         &-content {
             padding: 22px 97px 22px 31px;
+            position: relative;
 
             @include media(mobile) {
                 padding: 14px 17px;
@@ -107,6 +108,8 @@
                     margin-bottom: 26px;
                 }
             }
+
+
         }
 
         &-txt {
@@ -145,6 +148,38 @@
                     max-width: 24px;
                     font-size: 10px;
                     line-height: 12px;
+                }
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 28px;
+            right: 22px;
+            border: none;
+            background: inherit;
+
+            @include media(tablet) {
+                right: 24px;
+            }
+
+            @include media(mobile) {
+                top: 17px;
+                right: 12px;
+            }
+
+            &:hover svg {
+                fill: $secondary-color;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                fill: #575757;
+
+                @include media(mobile) {
+                    width: 10px;
+                    height: 10px;
                 }
             }
         }

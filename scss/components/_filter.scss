@@ -94,7 +94,7 @@
 
         &-wrp {
             display: none;
-            width: 280px;
+            width: 100%;
             position: absolute;
             top: 8px;
             left: 0;
@@ -107,6 +107,7 @@
             @include media(mobile) {
                 top: 11px;
                 left: -16px;
+                width: 280px;
             }
         }
 
@@ -270,7 +271,7 @@
                     margin: 0 0 6px 0;
                     position: relative;
                     text-transform: uppercase;
-                    font-family: Roboto;
+                    font-family: 'Roboto', Arial, sans-serif;
                     color: #6F6E6E;
 
                     &:before {

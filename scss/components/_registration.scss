@@ -141,8 +141,6 @@
             }
         }
 
-        ul {}
-
         li {
             position: relative;
             font-weight: 300;
@@ -161,7 +159,7 @@
                 content: '';
                 width: 20px;
                 height: 16px;
-                background-image: url(../../img/marker.svg);
+                background-image: url(../img/marker.svg);
                 position: absolute;
                 top: 5px;
                 left: -40px;

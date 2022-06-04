@@ -1,0 +1,191 @@
+.registration {
+    padding: 64px 0 96px;
+
+    @include media(tablet) {
+        padding-top: 40px;
+    }
+
+    h2,
+    h3,
+    p,
+    ul {
+        margin: 0;
+    }
+
+    h3 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &-wrp {
+        display: flex;
+        justify-content: space-between;
+
+        @include media(mobile) {
+            display: block;
+            margin: 0 -8px;
+        }
+    }
+
+    &-form {
+        max-width: 360px;
+
+        @include media(mobile) {
+            max-width: none;
+        }
+
+        &-wrp {
+
+            @include media(tablet) {
+                width: 50%;
+            }
+
+            @include media(mobile) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        &-radio {
+            display: flex;
+            margin: 31px 0 33px;
+        }
+
+        input {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            padding: 13px 17px 16px;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            border: 1px solid #A4A4A4;
+            margin-top: 20px;
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+
+        label {
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            color: #000000;
+            margin-right: 20px;
+        }
+
+        p {
+            margin: 15px 0 39px;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+        }
+
+        button {
+            padding: 16px 29px;
+            background-color: $secondary-color;
+            color: #fff;
+            border: none;
+            text-transform: uppercase;
+
+            svg {
+                margin-left: 20px;
+            }
+
+            &:hover {
+                background-color: #E05C6E;
+            }
+        }
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 652px;
+
+        @include media(tablet) {
+            width: 50%;
+        }
+
+        @include media(mobile) {
+            width: 100%;
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+
+            @include media(tablet) {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 32px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-bottom: 21px;
+
+            @include media(tablet) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        li {
+            position: relative;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            list-style: none;
+            margin-bottom: 16px;
+
+            @include media(tablet) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 16px;
+                background-image: url(../img/marker.svg);
+                position: absolute;
+                top: 5px;
+                left: -40px;
+                color: #000;
+            }
+        }
+    }
+}
+
+.register-choice-1,
+.register-choice-2,
+.register-choice-3 {
+    display: flex;
+}
+
+.register-choice-3 {
+    display: none;
+
+    @include media(tablet) {
+        display: flex;
+    }
+}
+
+#register-choice-1,
+#register-choice-2,
+#register-choice-3 {
+    width: 17px;
+    margin: 0;
+}

@@ -1,0 +1,115 @@
+.hot-deals {
+    padding: 50px 0;
+
+
+    @include media(tablet) {
+        padding: 10px 0 114px;
+    }
+
+    @include media(mobile) {
+        padding: 54px 0 23px;
+    }
+
+
+    &-list {
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        text-transform: uppercase;
+        box-sizing: border-box;
+
+
+        @include media(tablet) {
+            margin: 0 -10px;
+        }
+
+        li {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 15px;
+            width: 33.3333%;
+
+
+            @include media(tablet) {
+                padding: 10px;
+            }
+
+            @include media(mobile) {
+                width: 100%;
+            }
+
+            &:last-child {
+                width: 100%;
+
+                .hot-deals-link {
+                    height: 180px;
+
+                    @include media(tablet) {
+                        height: 116px;
+                    }
+
+                    @include media(mobile) {
+                        max-height: 111px;
+                    }
+
+                    @include media(mobile-portrait) {
+                        height: 111px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-link {
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 260px;
+
+
+        @include media(tablet) {
+            background-size: cover;
+            background-position: center;
+            max-height: 167px;
+        }
+
+        @include media(mobile) {
+            max-height: 249px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(33, 22, 22, 0.7);
+            z-index: 1;
+        }
+
+        &-txt {
+            text-align: center;
+            z-index: 2;
+
+            span {
+                font-size: 16px;
+                line-height: 19px;
+                color: #fff;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 24px;
+                line-height: 29px;
+                font-weight: 700;
+                color: $secondary-color;
+            }
+        }
+    }
+}

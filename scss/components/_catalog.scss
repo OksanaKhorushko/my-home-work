@@ -1,0 +1,6 @@
+.catalog-featured-items {
+
+    @include media(tablet) {
+        padding: 0;
+    }
+}

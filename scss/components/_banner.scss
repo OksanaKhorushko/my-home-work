@@ -1,0 +1,112 @@
+.banner {
+    background-color: #F1E4E6;
+
+
+    &-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+
+        @include media(mobile) {
+            min-height: 363px;
+        }
+    }
+
+    &-bg,
+    &-content {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 15px;
+
+
+        @include media(mobile) {
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+
+    &-bg {
+        background-image: url(../img/banner-bg.png);
+        height: 764px;
+        background-position: -200px 0;
+
+
+        @include media(tablet) {
+            height: 368px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+
+        }
+
+
+        @include media(mobile) {
+            display: none;
+        }
+    }
+
+    &-title {
+        position: relative;
+        max-width: 100%;
+        margin: 0 0 0 48px;
+        padding-left: 28px;
+        font-size: 32px;
+        line-height: 38px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+
+        @include media(tablet) {
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0 0 0 24px;
+            padding-left: 28px;
+        }
+
+        @include media(mobile) {
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0;
+            padding-left: 27px;
+        }
+
+
+        &::before {
+            content: '';
+            width: 12px;
+            height: 92px;
+            top: 0;
+            background: $secondary-color;
+            left: 0;
+            position: absolute;
+
+
+            @include media(mobile) {
+                height: 61px;
+                top: 5px;
+            }
+        }
+
+        &-big {
+            display: block;
+            font-size: 48px;
+            line-height: 57px;
+
+
+            @include media(tablet) {
+                font-size: 44px;
+                line-height: 53px;
+            }
+
+            @include media(mobile) {
+                font-size: 38px;
+                line-height: 46px;
+            }
+        }
+
+        &-highlight {
+            color: $secondary-color;
+        }
+    }
+}

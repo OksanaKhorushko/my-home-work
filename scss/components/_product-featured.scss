@@ -1,0 +1,52 @@
+.products-page {
+
+    .product-featured {
+
+        &-3 {
+            @include media(mobile-portrait) {
+                display: none;
+            }
+        }
+
+        &-4 {
+            @include media(mobile-portrait) {
+                display: none;
+            }
+
+            @include media(mobile-portrait) {
+                display: block;
+            }
+        }
+
+        &-6 {
+            @include media(tablet) {
+                display: none;
+            }
+
+            @include media(mobile-portrait) {
+                display: block;
+            }
+        }
+    }
+
+    .featured-items {
+
+        @include media(mobile-portrait) {
+            padding-bottom: 64px;
+        }
+
+        .row {
+
+            @include media(tablet) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    .featured-item {
+
+        @include media(mobile-portrait) {
+            margin-bottom: 0;
+        }
+    }
+}

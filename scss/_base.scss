@@ -1,0 +1,39 @@
+body {
+    font-family: $main-font;
+    font-size: $main-size;
+    line-height: $main-line-height;
+    color: $main-color;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid $secondary-color;
+}

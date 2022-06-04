@@ -1,0 +1,19 @@
+.select-wrapper {
+    margin: 0 11px;
+
+    select {
+        display: block;
+        border: none;
+        text-transform: uppercase;
+        color: #6F6E6E;
+
+        @include media(mobile-portrait) {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+
+    select:focus {
+        border: none;
+    }
+}

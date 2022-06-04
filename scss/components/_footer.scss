@@ -1,0 +1,209 @@
+.footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 97px 0 156px;
+    position: relative;
+
+    @include media(tablet) {
+        padding: 64px 0 140px;
+    }
+
+    @include media(mobile-portrait) {
+        padding: 64px 0 110px;
+    }
+
+    &::before {
+        content: '';
+        background: rgba(244, 244, 244, 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    &-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        z-index: 1;
+        align-items: flex-end;
+
+        @include media(tablet) {
+            display: block;
+        }
+    }
+
+    &-review,
+    &-subscribe {
+        width: 100%;
+
+        @include media(tablet) {
+            margin: 0 auto;
+        }
+    }
+
+    &-review {
+        max-width: 360px;
+
+        @include media(tablet) {
+            margin: 0 auto 50px;
+        }
+
+        @include media(mobile-portrait) {
+            margin: 0 auto 60px;
+        }
+
+        img {
+            margin: 0 auto 30px;
+        }
+
+        q {
+            font-size: 20px;
+            line-height: 24px;
+            color: #222224;
+        }
+    }
+
+    &-subscribe {
+        max-width: 557px;
+
+        h3 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0 0 32px 0;
+            font-size: 18px;
+            line-height: 30px;
+            text-transform: uppercase;
+
+            @include media(tablet) {
+                margin: 0 0 27px 0;
+            }
+
+            @include media(mobile) {
+                margin: 0 0 22px 0;
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            height: 49px;
+        }
+
+        input {
+            box-sizing: border-box;
+            background-color: #E1E1E1;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            padding: 10px 22px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            width: 256px;
+
+            &:focus-visible {
+                outline: none;
+
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+
+        label {
+            display: block;
+        }
+
+        button {
+            box-sizing: border-box;
+            color: #fff;
+            background-color: $secondary-color;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            width: 100px;
+
+            &:hover {
+                background-color: #E05C6E;
+            }
+        }
+    }
+}
+
+
+
+/* Copyright */
+.copyright {
+    background: #222224;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 79px;
+        align-items: center;
+
+        @include media(tablet) {
+            padding: 0 32px;
+        }
+
+        @include media(mobile) {
+            margin: 0 auto;
+            text-align: center;
+            height: auto;
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding-bottom: 9px;
+        }
+    }
+
+    &-txt {
+        margin: 0;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+    }
+}
+
+
+
+/* Social */
+.social {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include media(mobile) {
+        margin: 40px 0 43px;
+    }
+
+    a {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        background-color: $main-bg;
+        margin-left: 7px;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: $secondary-color;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}

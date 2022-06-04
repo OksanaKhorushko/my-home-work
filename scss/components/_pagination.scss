@@ -1,0 +1,48 @@
+.pagination {
+    border: 1px solid #EBEBEB;
+    margin: 49px auto 0;
+    max-width: 283px;
+    display: block;
+
+    @include media(tablet) {
+        margin-top: 22px;
+    }
+
+    @include media(mobile) {
+        margin-top: 24px;
+    }
+
+    &-page {
+        padding: 15px;
+    }
+
+    &-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #EBEBEB;
+            padding: 9px;
+
+            &.active,
+            &:hover {
+                color: #EF5B70;
+            }
+        }
+    }
+
+    &-item {
+        padding: 0;
+        list-style: none;
+
+        span {
+            color: #EBEBEB;
+            margin: 0 -9px;
+        }
+    }
+}

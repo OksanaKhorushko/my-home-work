@@ -252,6 +252,55 @@ button:focus-visible {
   position: absolute;
   top: -8px;
   right: 0;
+  cursor: pointer;
+}
+
+.rightHeader {
+  position: relative;
+}
+
+.basket {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 37px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+@media (min-width: 340px) {
+  .basket {
+    font-size: 16px;
+  }
+}
+@media (min-width: 552px) {
+  .basket {
+    width: 500px;
+  }
+}
+.basketRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+
+.basketHeader {
+  font-weight: bold;
+}
+
+.basketTotal {
+  font-weight: bold;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
 }
 
 .banner {
@@ -563,11 +612,11 @@ button:focus-visible {
 .featured-item-img > img {
   width: 100%;
 }
-.featured-item-img:hover .add-to-card {
+.featured-item-img:hover .add-to-cart {
   display: flex;
 }
 
-.add-to-card {
+.add-to-cart {
   display: none;
   align-items: center;
   justify-content: center;
@@ -579,7 +628,7 @@ button:focus-visible {
   bottom: 0;
   background: rgba(58, 56, 56, 0.86);
 }
-.add-to-card-btn {
+.add-to-cart-btn {
   display: flex;
   position: absolute;
   padding: 11px 13px;
@@ -588,10 +637,10 @@ button:focus-visible {
   background-color: transparent;
   border: 1px solid #fff;
 }
-.add-to-card-btn:hover {
+.add-to-cart-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.add-to-card-btn img {
+.add-to-cart-btn img {
   margin-right: 11px;
 }
 
